@@ -1,4 +1,5 @@
 """Checks light, if green, says go."""
+__author__ = "730517776"
 
 light: str = input("What color is the light?"). lower()
 
