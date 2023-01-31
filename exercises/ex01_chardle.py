@@ -7,15 +7,11 @@ print("Searching for " + single_character + " in " + five_character_word)
 
 if (single_character == five_character_word[0]):
     print(single_character + " found at index 0")
-else:
-    if (single_character == five_character_word[1]):
-        print(single_character + " found at index 1")
-    else:
-        if (single_character == five_character_word[2]):
-            print(single_character + " found at index 2")
-        else:
-            if (single_character == five_character_word[3]):
-                print(single_character + " found at index 3")
-            else:
-                if (single_character == "five_character_word"[4]):
-                    print(single_character + " found at index 4")
+if (single_character == five_character_word[1]):
+    print(single_character + " found at index 1")
+if (single_character == five_character_word[2]):
+    print(single_character + " found at index 2")
+if (single_character == five_character_word[3]):
+    print(single_character + " found at index 3")
+if (single_character == "five_character_word"[4]):
+    print(single_character + " found at index 4")
