@@ -30,7 +30,7 @@ if (single_character == five_character_word[4]):
     counting_variable = counting_variable + 1
 
 if counting_variable == 1:
-    print("1 instances of " + single_character + " found in " + five_character_word)
+    print("1 instance of " + single_character + " found in " + five_character_word)
 if counting_variable == 2:
     print("2 instances of " + single_character + " found in " + five_character_word)
 if counting_variable == 3:
