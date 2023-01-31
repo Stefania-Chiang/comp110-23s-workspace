@@ -40,7 +40,7 @@ if (single_character_word == five_character_word[4]):
     counting_variable = counting_variable + 1
 
 if counting_variable == 0:
-    print("no instance of " + single_character_word + " found in " + five_character_word)
+    print("No instances of " + single_character_word + " found in " + five_character_word)
 if counting_variable == 1:
     print("1 instance of " + single_character_word + " found in " + five_character_word)
 if counting_variable == 2:
