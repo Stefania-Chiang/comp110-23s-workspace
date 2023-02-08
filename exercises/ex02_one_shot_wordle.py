@@ -7,10 +7,22 @@ playing: bool = True
 
 while playing:
     if guess == SECRET:
-        print("Woo! You got it! ")
+        print(f"Woo! You got it! ")
         playing = False
     else:
-        if len(guess) != 6:
-            print(" That was not 6 letters! Try again: ")
+        if len(guess) == 6:
+            print(f"Not quite. Play again soon! ")
+            playing = False
         else:
-            if
+            if len(guess) != 6:
+                print(f"That was not 6 letters! Try again: ")
+                playing = False
+            if len(guess) != 6:
+                print(f"That was not 6 letters! Try again: ")
+                playing = False
+            if len(guess) != 6:
+                print(f"That was not 6 letters! Try again: ")
+                playing = False
+            if len(guess) != 6:
+                print(f"That was not 6 letters! Try again: ")
+                playing = False
