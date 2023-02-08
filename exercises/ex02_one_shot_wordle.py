@@ -15,3 +15,4 @@ while playing:
             playing = False
         else:
             guess = int(input("That was not 6 letters! Try again: "))
+            playing = True
