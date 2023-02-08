@@ -13,16 +13,6 @@ while playing:
         if len(guess) == 6:
             print(f"Not quite. Play again soon! ")
             playing = False
-        else:
-            if len(guess) != 6:
-                print(f"That was not 6 letters! Try again: ")
-                playing = False
-            if len(guess) != 6:
-                print(f"That was not 6 letters! Try again: ")
-                playing = False
-            if len(guess) != 6:
-                print(f"That was not 6 letters! Try again: ")
-                playing = False
-            if len(guess) != 6:
+        if len(guess) != 6:
                 print(f"That was not 6 letters! Try again: ")
                 playing = False
