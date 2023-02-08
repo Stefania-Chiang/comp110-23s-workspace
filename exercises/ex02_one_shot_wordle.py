@@ -2,7 +2,7 @@
 __author__ = "730517776"
 
 SECRET: str = "python"
-guess: str = str(input("What is your 6-letter guess? "))
+guess: str = input("What is your 6-letter guess? ")
 playing: bool = True
 
 while playing:
@@ -14,5 +14,4 @@ while playing:
             print(f"Not quite. Play again soon! ")
             playing = False
         else:
-            guess = int(input("That was not 6 letters! Try again: "))
-            playing = True
+            guess = input("That was not 6 letters! Try again: ")
