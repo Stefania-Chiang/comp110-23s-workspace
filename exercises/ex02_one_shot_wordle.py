@@ -15,4 +15,4 @@ while playing:
             playing = False
         else:
             print(f"That was not 6 letters! Try again: ")
-        guess = int(input("That was not 6 letters! Try again: "))
+            guess = int(input("That was not 6 letters! Try again: "))
