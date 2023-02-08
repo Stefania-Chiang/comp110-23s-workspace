@@ -15,4 +15,3 @@ while playing:
             playing = False
         else:
             print(f"That was not 6 letters! Try again: ")
-            playing = True
