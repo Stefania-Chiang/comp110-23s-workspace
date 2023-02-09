@@ -35,15 +35,10 @@ while playing:
         print(WHITE_BOX)
         playing = False
   
-    
-    
-    
-    
-    
-    
 
 while playing:
     if guess == SECRET:
+        print(f"GREEN_BOX GREEN_BOX GREEN_BOX GREEN_BOX GREEN_BOX")
         print(f"Woo! You got it! ")
         playing = False
     else:
