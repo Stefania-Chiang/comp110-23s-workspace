@@ -1,6 +1,3 @@
-
-
-
 SECRET: str = "python"
 guess: str = input("What is your 6-letter guess? ")
 playing: bool = True
