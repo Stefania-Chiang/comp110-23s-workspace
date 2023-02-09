@@ -11,29 +11,36 @@ YELLOW_BOX: str = "\U0001F7E8"
 while playing:
     if guess[0] == SECRET[0]:
         print(GREEN_BOX)
+        if guess[1] == SECRET[1]:
+            print(GREEN_BOX)
+            if guess[2] == SECRET[2]:
+                print(GREEN_BOX)
+                if guess[3] == SECRET[3]:
+                    print(GREEN_BOX)
+                    if guess[4] == SECRET[4]:
+                        print(GREEN_BOX)
+                        if guess[5] == SECRET[5]:
+                            print(GREEN_BOX)
+                        else:
+                            print(WHITE_BOX)
+                            playing = False
+                    else:
+                        print(WHITE_BOX)
+                else:
+                    print(WHITE_BOX)
+            else:
+                print(WHITE_BOX)
+        else:
+            print(WHITE_BOX)
     else:
         print(WHITE_BOX)
-    if guess[1] == SECRET[1]:
-        print(GREEN_BOX)
-    else:
-        print(WHITE_BOX)
-    if guess[2] == SECRET[2]:
-        print(GREEN_BOX)
-    else:
-        print(WHITE_BOX)
-    if guess[3] == SECRET[3]:
-        print(GREEN_BOX)
-    else:
-        print(WHITE_BOX)
-    if guess[4] == SECRET[4]:
-        print(GREEN_BOX)
-    else:
-        print(WHITE_BOX)
-    if guess[5] == SECRET[5]:
-        print(GREEN_BOX)
-    else:
-        print(WHITE_BOX)
-        playing = False
+  
+    
+    
+    
+    
+    
+    
 
 while playing:
     if guess == SECRET:
