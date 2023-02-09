@@ -11,6 +11,7 @@ playing: bool = True
 
 while playing:
     if guess == SECRET:
+        print(GREEN_BOX)
         print(f"Woo! You got it! ")
         playing = False
     else:
