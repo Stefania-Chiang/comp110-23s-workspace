@@ -11,11 +11,11 @@ YELLOW_BOX: str = "\U0001F7E8"
 
 while playing:
     if guess == SECRET:
-        print(GREEN_BOX + GREEN_BOX + GREEN_BOX + GREEN_BOX + GREEN_BOX)
+        print(GREEN_BOX+GREEN_BOX+GREEN_BOX+GREEN_BOX+GREEN_BOX+GREEN_BOX)
         print(f"Woo! You got it! ")
         playing = False
     else:
-        if len(guess) == 6:
+        if len(guess) == len(SECRET):
             print(f"Not quite. Play again soon! ")
             playing = False
         else:
