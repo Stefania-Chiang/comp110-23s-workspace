@@ -11,7 +11,7 @@ YELLOW_BOX: str = "\U0001F7E8"
 
 while playing:
     if guess == SECRET:
-        print(GREEN_BOX+GREEN_BOX+GREEN_BOX+GREEN_BOX+GREEN_BOX+GREEN_BOX)
+        print(f"{GREEN_BOX}{GREEN_BOX}{GREEN_BOX}{GREEN_BOX}{GREEN_BOX}{GREEN_BOX}")
         print("Woo! You got it! ")
         playing = False
     else:
