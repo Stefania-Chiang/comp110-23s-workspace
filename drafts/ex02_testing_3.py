@@ -2,8 +2,13 @@
 __author__ = "730517776"
 
 SECRET: str = "python"
-guess: str = input("What is your 6-letter guess? ")
+secret_length: int = len(SECRET)
+guess: str = input(f"What is your {secret_length}-letter guess? ")
+guess_length: int = len(guess)
 playing: bool = True
+
+while secret_length != len(guess):
+    try_again: str = input(f'That was')
 
 WHITE_BOX: str = "\U00002B1C"
 GREEN_BOX: str = "\U0001F7E9"
@@ -20,4 +25,3 @@ while playing:
             playing = False
         else:
             guess = input("That was not 6 letters! Try again: ")
-
