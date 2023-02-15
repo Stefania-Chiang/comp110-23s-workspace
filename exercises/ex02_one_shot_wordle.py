@@ -1,11 +1,10 @@
 """EX02 - One-Shot Wordle - Loops!"""
-__author__ = "730517776"
+__author__: str = "730517776"
 
 SECRET: str = "python"
 secret_length: int = len(SECRET)
 guess: str = input(f"What is your {secret_length}-letter guess? ")
 guess_length: int = len(guess)
-playing: bool = True
 
 while secret_length != len(guess):
     try_again: str = input(f"That was not {secret_length} letters! Try again: ")
@@ -24,7 +23,7 @@ while word_index < secret_length:
         index_found: bool = False
         secret_index: int = 0
         while not index_found and secret_index < secret_length:
-            if guess[word_index] == SECRET(secret_index):
+            if guess[word_index] == SECRET[secret_index]:
                 index_found = True
             else:
                 secret_index = secret_index + 1
