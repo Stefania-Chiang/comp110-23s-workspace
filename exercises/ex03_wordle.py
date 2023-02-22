@@ -1,8 +1,8 @@
 """EX03 - Structured Wordle"""
-__author__ = "730517776"
+__author__: str = "730517776"
 
 def main() -> None:
-    """Main game loop."""
+    """Main wordle game loop."""
     SECRET: str = "codes"
     guess_amount: int = 1
     game_won: bool = False
@@ -24,7 +24,6 @@ def contains_char(word: str, single_char: str) -> bool:
     assert len(single_char) == 1
     word_index: int = 0
     secret_length: int = len(word)
-
     while word_index < secret_length:
         if single_char == word[word_index]:
             return True
