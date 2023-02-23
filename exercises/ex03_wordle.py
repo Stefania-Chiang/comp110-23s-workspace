@@ -38,7 +38,7 @@ def emojified(guess: str, SECRET: str) -> str:
     GREEN_BOX: str = "\U0001F7E9"
     YELLOW_BOX: str = "\U0001F7E8"
     word_index: int = 0
-    emoji_result: str = " "
+    emoji_result: str = ""
     while word_index < len(SECRET):
         if guess[word_index] == SECRET[word_index]:
             emoji_result = emoji_result + GREEN_BOX
