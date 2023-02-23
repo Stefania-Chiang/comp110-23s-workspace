@@ -5,4 +5,5 @@ grocery_list.append("bananas")
 grocery_list.append("milk")
 grocery_list.append("bread")
 grocery_list[1] = "cereal"
-print(grocery_list[1])
+
+print(len(grocery_list))
