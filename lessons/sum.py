@@ -7,4 +7,4 @@ def sum(xs: list[float]) -> float:
     while idx < len(xs):
         sum_total += xs[idx]
         idx += 1
-    return 0.0
+    return sum_total
