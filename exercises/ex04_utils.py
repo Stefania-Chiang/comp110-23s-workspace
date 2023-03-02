@@ -1,7 +1,7 @@
 """EX04 - Utility Functions."""
 __author__ = "730517776"
 
-# function 1 of EX04: all
+
 def all(input: list[int], num: int) -> bool:
     """Returns a bool indicating whether or not all the ints in the list are the same as the given int."""
     if len(input) == 0:
@@ -15,7 +15,7 @@ def all(input: list[int], num: int) -> bool:
         index += 1
     return True
 
-# function 2 of EX04: max
+
 def max(input: list[int]) -> int:
     """Returns the largest number in the list."""
     if len(input) == 0:
@@ -31,7 +31,7 @@ def max(input: list[int]) -> int:
     # Return the biggest value 
     return max
 
-# function 3 of EX04: is_equal
+
 def is_equal(list_1: list[int], list_2: list[int]) -> bool:
     """Return True if every element at every index is equal in both lists."""
     if len(list_1) != len(list_2):
