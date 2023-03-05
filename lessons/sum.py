@@ -1,10 +1,9 @@
-"""Example function for unit tests"""
+"""Practicing for ... in ... loops."""
 
 def sum(xs: list[float]) -> float:
     """return sum off all elements in xs"""
-    sum_total: float = 0.0
+    sum_old: float = 0.0
     idx: int = 0
-    while idx < len(xs):
-        sum_total += xs[idx]
-        idx += 1
-    return sum_total
+
+    for sum_total in xs:
+        return sum_total
