@@ -2,7 +2,7 @@
 
 def sum(xs: list[float]) -> float:
     """return sum off all elements in xs"""
-    sum_old: float = 0.0
+    sum_total: float = 0.0
     idx: int = 0
 
     for sum_total in xs:
