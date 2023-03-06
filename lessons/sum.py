@@ -4,8 +4,8 @@ def sum(xs: list[float]) -> float:
     """return sum off all elements in xs"""
     sum_total: float = 0.0
     idx: int = 0
-    sum_total += xs[idx]
-    
+
     for sum_total in xs:
         return sum_total
-    
+    sum_total += xs[idx]
+    idx += 1
