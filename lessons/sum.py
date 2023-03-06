@@ -5,7 +5,5 @@ def sum(xs: list[float]) -> float:
     sum_total: float = 0.0
     idx: int = 0
 
-    for sum_total in xs:
-        sum_total += xs[idx]
-        idx += 1
-        return sum_total
+for sum_total in xs:
+    print(sum_total)
