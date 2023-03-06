@@ -6,4 +6,6 @@ def sum(xs: list[float]) -> float:
     idx: int = 0
 
     for sum_total in xs:
+        sum_total += xs[idx]
         return sum_total
+    
