@@ -62,7 +62,6 @@ def test_subset_use2() -> None:
     assert sub(test_list, start_at_idx, end_at_idx) == [1, 2]
 
 
-
 def test_edge_idx() -> None:
     """Test edge case."""
     test_list: list[int] = [-5, -4, -3, -2, -1]
