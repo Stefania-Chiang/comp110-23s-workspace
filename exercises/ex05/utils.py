@@ -23,5 +23,5 @@ def concat(first_list: list[int], second_list: list[int]) -> list[int]:
 
 def sub(a_list: list[int], start_index: int, end_index: int) ->list[int]:
     """Generate a list which is a subset of the given list, between the specified start index and the end index - 1."""
-    new_list: list[int]
-    
+    new_list: list[int] = [a_list[start_index], a_list[end_index - 1]]
+    return new_list
