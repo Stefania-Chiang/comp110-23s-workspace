@@ -26,14 +26,14 @@ def test_empty_list() -> None:
 
 
 def test_positive_ints() -> None:
-    """Test with positive ints"""
+    """Test with positive ints."""
     test_list1: list[int] = [1, 1, 1]
     test_list2: list[int] = [2, 2, 2]
     assert concat(test_list1, test_list2) == [1, 1, 1, 2, 2, 2]
 
 
 def test_negative_ints() -> None:
-    """Test with negative ints"""
+    """Test with negative ints."""
     test_list1: list[int] = [-5, -7, -2, -8]
     test_list2: list[int] = [-4, -2, -6, -10]
     assert concat(test_list1, test_list2) == [-5, -7, -2, -8, -4, -2, -6, -10]
