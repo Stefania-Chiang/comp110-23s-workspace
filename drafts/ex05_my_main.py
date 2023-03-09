@@ -1,5 +1,9 @@
 """EX05 - List Utility Functions."""
 __author__ = "730517776"
+# this version doesn't work because
+# I have to claim a new list because if don't
+# my initial list will turn into an infinitive loop
+# and so the unit test won't run
 
 
 def only_evens(input_list: list[int]) -> list[int]:
