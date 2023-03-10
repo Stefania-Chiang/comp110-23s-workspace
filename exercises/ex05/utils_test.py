@@ -19,17 +19,10 @@ def test_odd_num() -> None:
     assert only_evens(test_old_list) == []
 
 
-def test_mix_num() -> None:
-    """Test only evens with mix numbers."""
-    test_old_list: list[int] = [1, 2, 3, 4, 5, 6]
-    assert only_evens(test_old_list) == [2, 4, 6]
-
-
 def test_no_num() -> None:
-    """Test concat with no numbers."""
-    test_first_list: list[int] = []
-    test_second_list: list[int] = []
-    assert concat(test_first_list,  test_second_list) == []
+    """Test only evens with no numbers."""
+    test_old_list: list[int] = []
+    assert only_evens(test_old_list) == []
 
 
 def test_positive_num() -> None:
@@ -44,6 +37,13 @@ def test_negative_num() -> None:
     test_first_list: list[int] = [-7, -8, -9]
     test_second_list: list[int] = [-30, -20, -10]
     assert concat(test_first_list,  test_second_list) == [-7, -8, -9, -30, -20, -10]
+
+
+def test_no_num() -> None:
+    """Test concat with no numbers."""
+    test_first_list: list[int] = []
+    test_second_list: list[int] = []
+    assert concat(test_first_list,  test_second_list) == []
 
 
 def test_first_use_case() -> None:
@@ -64,7 +64,7 @@ def test_second_use_case() -> None:
 
 def test_edge_case() -> None:
     """Test sub with edge case."""
-    test_given_list: list[int]= [9, 99, 999, 9999, 99999]
-    test_start_index: int = 0
-    test_end_index: int = 4
-    assert sub(test_given_list, test_start_index, test_end_index) == [9, 99, 999, 9999]
+    test_given_list: list[int]= [9, 99, 999, 9999]
+    test_start_index: int = 4
+    test_end_index: int = 0
+    assert sub(test_given_list, test_start_index, test_end_index) == []

@@ -24,9 +24,8 @@ def sub(given_list: list[int], start_index: int, end_index: int) -> list[int]:
     new_list: list[int] = []
     if len(given_list) == 0 or start_index >= len(given_list) or end_index <= 0:
         new_list = []
-    else:
-        start_index = 0
-    for num in given_list:
-        if start_index < end_index:
-            new_list.append(num)
+        return new_list
+    while start_index < end_index:
+        new_list.append(given_list[start_index])
+        start_index += 1
     return new_list
