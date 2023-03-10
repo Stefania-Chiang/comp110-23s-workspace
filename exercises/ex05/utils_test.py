@@ -45,3 +45,26 @@ def test_negative_num() -> None:
     test_second_list: list[int] = [-30, -20, -10]
     assert concat(test_first_list,  test_second_list) == [-7, -8, -9, -30, -20, -10]
 
+
+def test_first_use_case() -> None:
+    """Test sub with first use case."""
+    test_given_list: list[int] = [50, 55, 60, 65, 70, 75]
+    test_start_index: int = 3
+    test_end_index: int = 5
+    assert sub(test_given_list, test_start_index, test_end_index) == [65, 70]
+
+
+def test_second_use_case() -> None:
+    """Test sub with second use case."""
+    test_given_list: list[int]= [19, 17, 15, 13, 11]
+    test_start_index: int = 1
+    test_end_index: int = 2
+    assert sub(test_given_list, test_start_index, test_end_index) == [17]
+
+
+def test_edge_case() -> None:
+    """Test sub with edge case."""
+    test_given_list: list[int]= [9, 99, 999, 9999, 99999]
+    test_start_index: int = 0
+    test_end_index: int = 4
+    assert sub(test_given_list, test_start_index, test_end_index) == [9, 99, 999, 9999]
