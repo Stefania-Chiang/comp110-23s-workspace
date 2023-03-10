@@ -24,10 +24,14 @@ def concat(first_list: list[int], second_list: list[int]) -> list[int]:
 def sub(given_list: list[int], start_index: int, end_index: int) -> list[int]:
     """Return a new list which is subset of the given list between start index and end index - 1."""
     new_list: list[int] = []
-    if len(given_list) == 0 or start_index >= len(given_list) or start_index <= 0 or end_index >= len(given_list) or end_index <= 0:
+    if len(given_list) == 0 or start_index >= len(given_list) or end_index <= 0:
         new_list = []
         return new_list
     while start_index < end_index:
+        if start_index <= 0:
+            start_index = 0
+        if end_index >= len(given_list):
+            end_index = len(given_list)
         new_list.append(given_list[start_index])
         start_index += 1
     return new_list
