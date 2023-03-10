@@ -3,6 +3,8 @@ __author__ = "730517776"
 
 
 from exercises.ex05.utils import only_evens
+from exercises.ex05.utils import sub
+from exercises.ex05.utils import concat
 
 
 def test_one_num() -> None:
@@ -21,3 +23,4 @@ def test_negative_num() -> None:
     """Test a list with negative numbers."""
     test_list: list[int] = [-7, -8, -9, -10]
     assert only_evens(test_list) == [-8, -10]
+
