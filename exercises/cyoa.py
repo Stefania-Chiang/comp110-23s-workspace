@@ -1,13 +1,12 @@
 """EX06 - Choose Your Own Adventure."""
 __author__ = "730517776"
 
-import random
 
-# Global Variables
+import random
 player: str = ""
 points: int = 0
 
-# Main Function
+
 def main() -> None:
   """Main travel game loop."""
   greet()
@@ -30,7 +29,7 @@ def main() -> None:
     else:
       print("Sorry, your choice is unavailable. Please enter a number from 1 to 4.")
 
-# Greet Procedure
+
 def greet() -> None:
   print("Welcome to the Around the World travel game!\n")
   PLAYER = input("What is the passenger's name?\n")
@@ -51,7 +50,7 @@ def explore_asia() -> None:
   else:
     print("Sorry, your choice is unavailable. Please enter a number from 1 to 2.")
 
-# Custom Function: Explore Europe
+
 def explore_europe(points) -> None:
   print(f"\n{player}, you are now in Europe.")
   print("You see a locked door, how do you open it?")
@@ -68,7 +67,7 @@ def explore_europe(points) -> None:
     print("Sorry, your choice is unavailable. Please enter a number from 1 to 2.")
     return points
 
-# Custom procedure: Explore Africa
+
 def explore_africa() -> None:
   print(f"\n{player}, you have traveled to Africa.")
   print("You see a group of bandits causing trouble, what do you do?")
