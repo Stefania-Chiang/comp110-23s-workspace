@@ -2,7 +2,6 @@
 __author__ = "730517776"
 
 
-import random
 player: str = ""
 points: int = 0
 
@@ -11,12 +10,8 @@ def main() -> None:
   """Main function."""
   greet()
   while True:
-    print("Which continent do you want to explore?\n")
-    print("1. Asia\n")
-    print("2. Europe\n")
-    print("3. Africa\n")
-    print("4. End my adventure\n")
-    choice = input("Enter your choice (1-4): ")
+    print("Which continent do you want to explore?\n1. Asia\n2. Europe\n3. Africa\n4. End my adventure\n")
+    choice: int = input("Enter your choice (1-4):\n")
     if choice == "1":
       explore_asia()
     if choice == "2":
@@ -25,67 +20,65 @@ def main() -> None:
       explore_africa()
     if choice == "4":
       print(f"\nGoodbye {player}, congratulations for earning {points} points during your journey!")
-      return None
     else:
-      print("Sorry, your choice is unavailable. Please enter a number from 1 to 4.")
+      print("\nSorry, your choice is unavailable. Please enter a number from 1 to 4.")
+    return None
 
 
 def greet() -> None:
   """Greet procedure and welcome message."""
   print("Welcome to the Around the World travel game!\n")
-  player = input("What is the passenger's name?\n")
+  player: str = input("What is the passenger's name?\n")
   print(f"\nHello {player}, let's begin your journey!\n")
 
 
 def explore_asia() -> None:
   """Exploring Asia."""
-  print(f"\n {player}, you have arrived in Asia.")
-  print("\nYou hear rustling in the bushes, do you investigate?")
-  print("1. Yes")
-  print("2. No")
-  choice = input("Enter your choice (1-2): ")
+  print(f"\n{player}, you have arrived in Asia.\nYou hear something in the bamboo forest, do you want to check it out?\n1. Yes\n2. No\n")
+  choice: int = input("Enter your choice (1-2):\n")
   if choice == "1":
-    print("You investigate and find a lost treasure! You earn 10 adventure points.")
-    points += 10
+    print("\nYou discover a cute panda!\nYou earn 40 adventure points.")
+    points += 40
   if choice == "2":
-    print("You decide to play it safe and leave the area.")
+    print("\nYou decide not to take the risk, and you leave the area safely.\nYou earn 20 adventure points.")
+    points += 20
   else:
-    print("Sorry, your choice is unavailable. Please enter a number from 1 to 2.")
+    print("\nSorry, your choice is unavailable. Please enter a number from 1 to 2.")
+  return points
 
 
 def explore_europe(points) -> None:
   """Exploring Europe."""
-  print(f"\n{player}, you are now in Europe.")
-  print("You see a locked door, how do you open it?")
-  print("1. Pick the lock")
-  print("2. Look for the key")
-  choice = input("Enter your choice (1-2): ")
+  print(f"\n{player}, you are now in Europe.\nYou see a castle, but the gate is locked, how can you get in?\n1. Knock on the gate\n2. Look around for secret entrance\n")
+  choice = input("Enter your choice (1-2):\n")
   if choice == "1":
-    print("You attempt to pick the lock, but fail. You lose 5 adventure points.")
-    points -= 5
+    print("\nYou mistakenly enter the evil forces territory.\nYou lose 10 adventure points.")
+    points -= 10
   if choice == "2":
-    print("You search the area and find the key! You earn 20 adventure points.")
-    points += 20
+    print("\nYou peek into the secret entrance and discover the evil forces insdie, so you leave the area quickly.\nYou earn 30 adventure points.")
+    points += 30
   else:
-    print("Sorry, your choice is unavailable. Please enter a number from 1 to 2.")
-    return points
+    print("\nSorry, your choice is unavailable. Please enter a number from 1 to 2.")
+  return points
 
 
 def explore_africa() -> None:
   """Exploring Africa."""
-  print(f"\n{player}, you have traveled to Africa.")
-  print("You see a group of bandits causing trouble, what do you do?")
-  print("1. Confront the bandits")
-  print("2. Alert the authorities")
-  print("3. Ignore them and go about your business")
-  choice = input("Enter your choice (1-3): ")
+  print(f"\n{player}, you have traveled to Africa.\nYou see a lion approaching a deer, and you have a gun in your hand, what should you do?\n1. Shoot in the air to scare them\n2. Shoot the lion\n3. Watch quietly\n")
+  choice = input("Enter your choice (1-3):\n")
   if choice == "1":
-    print("You take on the bandits and win! You earn 15 adventure points.")
-    points += 15
+    print("\nYou shouldn't interrupt the process of nature.\nYou lose 20 adventure points.")
+    points -= 20
   if choice == "2":
-    print("You report the bandits to the authorities and they are apprehended. You earn 5 adventure points.")
-    points += 5
+    print("\nYou miss your shot, so now the lion is coming for you.\nYou lose 30 adventure points.")
+    points -= 30
   if choice == "3":
-    print("You decide to avoid the bandits and go about your business.")
+    print("\nYou play smart and witness a cool process of nature.\nYou earn 10 adventure points.")
+    points += 10
   else:
-    print("Sorry, your choice is unavailable. Please enter a number from 1 to 3.")
+    print("\nSorry, your choice is unavailable. Please enter a number from 1 to 3.")
+  return points
+
+
+if __name__ == "__main__":
+    main()
