@@ -11,8 +11,8 @@ def main() -> None:
     greet()
     playing: bool = True
     while playing:
-        print("Which continent do you want to explore?\n1. Asia\n2. Europe\n3. Africa\n4. End my adventure\n")
-        choice: int = input("Enter your choice (1-4):\n")
+        print("Which continent do you want to explore?\n1. Asia\n2. Europe\n3. Africa\n4. End my adventure")
+        choice: int = input("Enter your choice (1-4): ")
         if choice == "1":
             explore_asia()
         if choice == "2":
@@ -25,16 +25,16 @@ def main() -> None:
             print("\nSorry, your choice is unavailable. Please enter a number from 1 to 4.")
 
 
-
 def greet() -> None:
     """Greet procedure and welcome message."""
-    print("Welcome to the Around the World travel game!\n")
-    player: str = input("What is the passenger's name?\n")
-    print(f"\nHello {player}, let's begin your journey!\n")
+    print("Welcome to the Around the World travel game!")
+    player: str = input("What is the passenger's name? ")
+    print(f"Hello {player}, let's begin your journey!")
 
 
 def explore_asia() -> None:
     """Exploring Asia."""
+    global player
     print(f"\n{player}, you have arrived in Asia.\nYou hear something in the bamboo forest, do you want to check it out?\n1. Yes\n2. No\n")
     choice: int = input("Enter your choice (1-2):\n")
     if choice == "1":
