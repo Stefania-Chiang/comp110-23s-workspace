@@ -8,7 +8,7 @@ points: int = 0
 
 
 def main() -> None:
-  """Main travel game loop."""
+  """Main function."""
   greet()
   while True:
     print("Which continent do you want to explore?\n")
@@ -31,12 +31,14 @@ def main() -> None:
 
 
 def greet() -> None:
+  """Greet procedure and welcome message."""
   print("Welcome to the Around the World travel game!\n")
   player = input("What is the passenger's name?\n")
   print(f"\nHello {player}, let's begin your journey!\n")
 
 
 def explore_asia() -> None:
+  """Exploring Asia."""
   print(f"\n {player}, you have arrived in Asia.")
   print("\nYou hear rustling in the bushes, do you investigate?")
   print("1. Yes")
@@ -52,6 +54,7 @@ def explore_asia() -> None:
 
 
 def explore_europe(points) -> None:
+  """Exploring Europe."""
   print(f"\n{player}, you are now in Europe.")
   print("You see a locked door, how do you open it?")
   print("1. Pick the lock")
@@ -69,6 +72,7 @@ def explore_europe(points) -> None:
 
 
 def explore_africa() -> None:
+  """Exploring Africa."""
   print(f"\n{player}, you have traveled to Africa.")
   print("You see a group of bandits causing trouble, what do you do?")
   print("1. Confront the bandits")
