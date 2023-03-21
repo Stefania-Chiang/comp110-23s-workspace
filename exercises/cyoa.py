@@ -32,10 +32,10 @@ def main() -> None:
 
 def greet() -> None:
   print("Welcome to the Around the World travel game!\n")
-  PLAYER = input("What is the passenger's name?\n")
-  print(f"\nHello {PLAYER}, let's begin your journey!\n")
+  player = input("What is the passenger's name?\n")
+  print(f"\nHello {player}, let's begin your journey!\n")
 
-# Custom Procedure: Explore Asia
+
 def explore_asia() -> None:
   print(f"\n {player}, you have arrived in Asia.")
   print("\nYou hear rustling in the bushes, do you investigate?")
@@ -44,7 +44,7 @@ def explore_asia() -> None:
   choice = input("Enter your choice (1-2): ")
   if choice == "1":
     print("You investigate and find a lost treasure! You earn 10 adventure points.")
-    POINTS += 10
+    points += 10
   if choice == "2":
     print("You decide to play it safe and leave the area.")
   else:
@@ -77,10 +77,10 @@ def explore_africa() -> None:
   choice = input("Enter your choice (1-3): ")
   if choice == "1":
     print("You take on the bandits and win! You earn 15 adventure points.")
-    POINTS += 15
+    points += 15
   if choice == "2":
     print("You report the bandits to the authorities and they are apprehended. You earn 5 adventure points.")
-    POINTS += 5
+    points += 5
   if choice == "3":
     print("You decide to avoid the bandits and go about your business.")
   else:
