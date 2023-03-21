@@ -14,7 +14,7 @@ def main() -> None:
 	    print("Which continent do you want to explore?\n1. Asia\n2. Europe\n3. Africa\n4. End my adventure\n")
 	    choice: int = input("Enter your choice (1-4):\n")
 	    if choice == "1":
-	    explore_asia()
+	        explore_asia()
 		if choice == "2":
 			points = explore_europe(points)
 		if choice == "3":
