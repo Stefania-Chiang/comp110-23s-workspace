@@ -4,8 +4,8 @@ __author__ = "730517776"
 import random
 
 # Global Variables
-POINTS = 0
-PLAYER = ""
+player: str = ""
+points: int = 0
 
 # Main Function
 def main() -> None:
@@ -25,7 +25,7 @@ def main() -> None:
     if choice == "3":
       explore_africa()
     if choice == "4":
-      print(f"\nGoodbye {PLAYER}, congratulations for earning {POINTS} points during your journey!")
+      print(f"\nGoodbye {player}, congratulations for earning {points} points during your journey!")
       return None
     else:
       print("Sorry, your choice is unavailable. Please enter a number from 1 to 4.")
@@ -38,7 +38,7 @@ def greet() -> None:
 
 # Custom Procedure: Explore Asia
 def explore_asia() -> None:
-  print(f"\n {PLAYER}, you have arrived in Asia.")
+  print(f"\n {player}, you have arrived in Asia.")
   print("\nYou hear rustling in the bushes, do you investigate?")
   print("1. Yes")
   print("2. No")
@@ -53,7 +53,7 @@ def explore_asia() -> None:
 
 # Custom Function: Explore Europe
 def explore_europe(points) -> None:
-  print(f"\n{PLAYER}, you are now in Europe.")
+  print(f"\n{player}, you are now in Europe.")
   print("You see a locked door, how do you open it?")
   print("1. Pick the lock")
   print("2. Look for the key")
@@ -70,7 +70,7 @@ def explore_europe(points) -> None:
 
 # Custom procedure: Explore Africa
 def explore_africa() -> None:
-  print(f"\n{PLAYER}, you have traveled to Africa.")
+  print(f"\n{player}, you have traveled to Africa.")
   print("You see a group of bandits causing trouble, what do you do?")
   print("1. Confront the bandits")
   print("2. Alert the authorities")
