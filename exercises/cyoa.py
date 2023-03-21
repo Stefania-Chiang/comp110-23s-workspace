@@ -49,7 +49,7 @@ def explore_asia() -> None:
   if choice == "2":
     print("You decide to play it safe and leave the area.")
   else:
-    print("Invalid choice, please enter a number from 1-2.")
+    print("Sorry, your choice is unavailable. Please enter a number from 1 to 2.")
 
 # Custom Function: Explore Europe
 def explore_europe(points) -> None:
@@ -65,7 +65,7 @@ def explore_europe(points) -> None:
     print("You search the area and find the key! You earn 20 adventure points.")
     points += 20
   else:
-    print("Invalid choice, please enter a number from 1-2.")
+    print("Sorry, your choice is unavailable. Please enter a number from 1 to 2.")
     return points
 
 # Custom procedure: Explore Africa
@@ -85,4 +85,4 @@ def explore_africa() -> None:
   if choice == "3":
     print("You decide to avoid the bandits and go about your business.")
   else:
-    print("Invalid choice, please enter a number")
+    print("Sorry, your choice is unavailable. Please enter a number from 1 to 3.")
