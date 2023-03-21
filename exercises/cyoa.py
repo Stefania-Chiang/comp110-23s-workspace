@@ -22,14 +22,13 @@ def main() -> None:
         if choice == "3":
             explore_africa()
         if choice == "4":
-            print(f"\nGoodbye {player}, congratulations for earning {points} points during your journey!")
+            print(f"Goodbye {player}, congratulations for earning {points} points during your journey!")
         else:
-            print("\nSorry, your choice is unavailable. Please enter a number from 1 to 4.")
+            print("Sorry, your choice is unavailable. Please enter a number from 1 to 4.")
 
 
 def greet() -> None:
     """Greet procedure and welcome message."""
-    global player
     print("Welcome to the Around the World travel game!")
     player: str = input("What is the passenger's name? ")
     print(f"Hello {player}, let's begin your journey!")
