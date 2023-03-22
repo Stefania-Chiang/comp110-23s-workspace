@@ -18,7 +18,7 @@ def main() -> None:
         if choice == "1":
             explore_asia()
         if choice == "2":
-            points = explore_europe()
+            explore_europe()
         if choice == "3":
             explore_africa()
         if choice == "4":
