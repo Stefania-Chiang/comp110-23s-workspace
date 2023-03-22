@@ -1,5 +1,6 @@
 """EX06 - Choose Your Own Adventure."""
 __author__ = "730517776"
+from random import randint
 
 
 # Global Variables
@@ -10,14 +11,15 @@ points: int
 # Emojis
 EARTH: str = "\U0001F30D"
 MAP: str = "\U0001F5FA"
+MONEY: str = "\U0001F4B0"
 ASIA: str = "\U000026E9"
 EUROPE: str = "\U0001F3F0"
 AFRICA: str = "\U0001F6D6"
 SAD: str = "\U0001F63F"
-MONEY: str = "\U0001F4B0"
+HAPPY: str = "\U0001F973"
 
 
-# Main Functiont
+# Main Function
 def main() -> None:
     """Main game loop."""
     global player, points
@@ -29,6 +31,7 @@ def main() -> None:
         print(f"Which continent do you want to explore? {MAP}\n1. Asia {ASIA}\n2. Europe {EUROPE}\n3. Africa {AFRICA}\n4. End my adventure {EARTH}")
         choice: str = input("Enter your choice (1-4): ")
         if choice == "4":
+            random()
             print(f"Good bye {player}, congratulations for earning {points} points during your journey! {MAP}")
             playing = False
         else:
@@ -40,7 +43,7 @@ def main() -> None:
                 explore_europe()
             if choice == "3":
                 explore_africa()
-            print(f"Great job {player}, you have earn {points} points so far, keep it up! {EARTH}")
+            print(f"Great job {player}, you have earn {points} points so far, keep it up! {HAPPY}")
             playing = True
         
 
@@ -53,7 +56,7 @@ def greet() -> None:
     print(f"Hello {player}, let's begin your journey! {EARTH}")
 
 
-# Custom Procedure
+# Custom Procedure 1
 def explore_asia() -> None:
     """Exploring Asia."""
     global player, points
@@ -74,7 +77,7 @@ def explore_asia() -> None:
             playing = False
     
 
-# Custom Procedure
+# Custom Procedure 2
 def explore_europe() -> None:
     """Exploring Europe."""
     global player, points
@@ -101,7 +104,7 @@ def explore_europe() -> None:
             playing = False
 
 
-# Custom Procedure
+# Custom Procedure 3
 def explore_africa() -> None:
     """Exploring Africa."""
     global player, points
@@ -123,6 +126,13 @@ def explore_africa() -> None:
                 print(f"You play smart and witness a cool process of nature.\nYou earn 10 adventure points. {MONEY}")
                 points += 10
             playing = False
+
+
+#Randomness
+def random() -> None:
+    """Randomly pick a lucky color."""
+    global player
+    print(f"Hang on {player}, before you leave the game, we'll let you know your lucky number for today! {EARTH}\nYour lucky number is {randint(1,9)}, yay! {HAPPY}")
 
 
 # Main Procedure
