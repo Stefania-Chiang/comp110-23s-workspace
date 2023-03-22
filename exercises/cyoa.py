@@ -85,7 +85,7 @@ def explore_europe() -> None:
         print(f"{player}, you are now in Europe. {EUROPE}\nYou see a castle, but the gate is locked, how can you get in?\n1. Knock on the gate\n2. Look around for secret entrance\n3. Climb over the wall\n4. Sream for help to see if there's anyone around")
         choice: str = input("Enter your choice (1-4): ")
         if choice != "1" and choice != "2" and choice != "3" and choice != "4":
-            choice = input(f"Sorry {player}, your choice is unavailable in Europe. {SAD}\nPlease enter a number from 1 to 2: ")
+            choice = input(f"Sorry {player}, your choice is unavailable in Europe. {SAD}\nPlease enter a number from 1 to 4: ")
         playing = True
         if choice == "1":
             print(f"You mistakenly enter the evil forces territory.\nYou lose 10 adventure points. {MONEY}")
@@ -111,7 +111,7 @@ def explore_africa() -> None:
         print(f"{player}, you have traveled to Africa. {AFRICA}\nYou see a lion approaching a deer, and you have a gun in your hand, what should you do?\n1. Shoot in the air to scare them\n2. Shoot the lion\n3. Watch quietly")
         choice: str = input("Enter your choice (1-3): ")
         if choice != "1" and choice != "2" and choice != "3":
-            choice = input(f"Sorry {player}, your choice is unavailable in Africa. {SAD}\nPlease enter a number from 1 to 2: ")
+            choice = input(f"Sorry {player}, your choice is unavailable in Africa. {SAD}\nPlease enter a number from 1 to 3: ")
             playing = True
         if choice == "1":
             print(f"You shouldn't interrupt the process of nature.\nYou lose 20 adventure points. {MONEY}")
