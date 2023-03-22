@@ -44,7 +44,7 @@ def explore_asia() -> None:
     while playing:
         print(f"{player}, you have arrived in Asia.\nYou hear something in the bamboo forest, do you want to check it out?\n1. Yes\n2. No")
         choice: str = input("Enter your choice (1-2): ")
-        if choice != "1" and "2":
+        if choice != "1" or "2":
             print("Sorry, your choice is unavailable in asia. Please enter a number from 1 to 2.")
         if choice == "1":
             print("You discover a cute panda!\nYou earn 40 adventure points.")
