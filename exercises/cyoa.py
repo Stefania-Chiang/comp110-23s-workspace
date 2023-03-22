@@ -14,14 +14,14 @@ def main() -> None:
     playing: bool = True
     while playing:
         print("Which continent do you want to explore?\n1. Asia\n2. Europe\n3. Africa\n4. End my adventure")
-        choice: int = int(input("Enter your choice (1-4): "))
-        if choice == 1:
+        choice: str = input("Enter your choice (1-4): ")
+        if choice == "1":
             explore_asia()
-        if choice == 2:
+        if choice == "2":
             explore_europe()
-        if choice == 3:
+        if choice == "3":
             explore_africa()
-        if choice == 4:
+        if choice == "4":
             print(f"Goodbye {player}, congratulations for earning {points} points during your journey!")
             playing = False
         else:
@@ -44,6 +44,9 @@ def explore_asia() -> None:
     while playing:
         print(f"{player}, you have arrived in Asia.\nYou hear something in the bamboo forest, do you want to check it out?\n1. Yes\n2. No")
         choice: str = input("Enter your choice (1-2): ")
+        if choice != "1" or "2":
+            print("Sorry, your choice is unavailable in asia. Please enter a number from 1 to 2.")
+            playing = False
         if choice == "1":
             print("You discover a cute panda!\nYou earn 40 adventure points.")
             points += 40
@@ -52,8 +55,7 @@ def explore_asia() -> None:
             print("You decide not to take the risk, and you leave the area safely.\nYou earn 20 adventure points.")
             points += 20
             playing = False
-        else:
-            print("Sorry, your choice is unavailable in asia. Please enter a number from 1 to 2.")
+            
 
 
 def explore_europe() -> None:
