@@ -1,13 +1,11 @@
 """EX06 - Choose Your Own Adventure."""
 __author__ = "730517776"
-
+from random import randint
+print(randint(3, 9))
 
 # Global Variables
 player: str
 points: int
-
-
-# Emojis
 EARTH: str = "\U0001F30D"
 MAP: str = "\U0001F5FA"
 ASIA: str = "\U000026E9"
@@ -17,7 +15,7 @@ SAD: str = "\U0001F63F"
 MONEY: str = "\U0001F4B0"
 
 
-# Main Functiont
+# Main Function
 def main() -> None:
     """Main game loop."""
     global player, points
@@ -26,7 +24,7 @@ def main() -> None:
     # Game Loop
     playing: bool = True
     while playing:
-        print(f"Which continent do you want to explore? {MAP}\n1. Asia {ASIA}\n2. Europe {EUROPE}\n3. Africa {AFRICA}\n4. End my adventure {EARTH}")
+        print(f"Which continent do you want to explore? {MAP}\n1. Asia {ASIA}\n2. Europe {EUROPE}\n3. Africa {AFRICA}\n4. End my adventure{EARTH}")
         choice: str = input("Enter your choice (1-4): ")
         if choice == "4":
             print(f"Good bye {player}, congratulations for earning {points} points during your journey! {MAP}")
@@ -74,7 +72,6 @@ def explore_asia() -> None:
             playing = False
     
 
-# Custom Procedure
 def explore_europe() -> None:
     """Exploring Europe."""
     global player, points
@@ -101,7 +98,6 @@ def explore_europe() -> None:
             playing = False
 
 
-# Custom Procedure
 def explore_africa() -> None:
     """Exploring Africa."""
     global player, points
@@ -127,4 +123,4 @@ def explore_africa() -> None:
 
 # Main Procedure
 if __name__ == "__main__":
-    main
+    main()
