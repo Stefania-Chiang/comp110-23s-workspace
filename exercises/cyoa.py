@@ -1,7 +1,7 @@
 """EX06 - Choose Your Own Adventure."""
 __author__ = "730517776"
 from random import randint
-print(randint(3,9))
+print(randint(3, 9))
 
 # Global Variables
 player: str
