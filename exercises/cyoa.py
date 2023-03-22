@@ -46,9 +46,11 @@ def explore_asia() -> None:
         if choice == "1":
             print("You discover a cute panda!\nYou earn 40 adventure points.")
             points += 40
+            playing = False
         if choice == "2":
             print("You decide not to take the risk, and you leave the area s.afely.\nYou earn 20 adventure points.")
             points += 20
+            playing = False
         else:
             print("Sorry, your choice is unavailable. Please enter a number from 1 to 2.")
 
