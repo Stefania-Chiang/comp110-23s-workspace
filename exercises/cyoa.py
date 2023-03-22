@@ -10,13 +10,12 @@ points: int = 0
 # Main Function
 def main() -> None:
     """Main function."""
-    global player
-    global points
+    global player, points
     greet()
     # Game Loop
     playing: bool = True
     while playing:
-        print("Which continent do you want to explore?\n1. Asia\n2. Europe\n3. Africa\n4. End my adventure")
+        print("Which continent do you want to explore?\n1. Asia \U000026E9\n2. Europe \U0001F3F0\n3. Africa \U0001F6D6\n4. End my adventure \U0001F5FA")
         choice: str = input("Enter your choice (1-4): ")
         if choice != "1" and choice != "2" and choice != "3" and choice != "4":
             choice = input(f"Sorry {player}, your choice is unavailable in the game.\nPlease enter a number from 1 to 4: ")
@@ -44,8 +43,7 @@ def greet() -> None:
 # Custom Procedure
 def explore_asia() -> None:
     """Exploring Asia."""
-    global player
-    global points
+    global player, points
     playing: bool = True
     while playing:
         print(f"{player}, you have arrived in Asia.\nYou hear something in the bamboo forest, do you want to check it out?\n1. Yes\n2. No")
@@ -64,8 +62,7 @@ def explore_asia() -> None:
 
 def explore_europe() -> None:
     """Exploring Europe."""
-    global player
-    global points
+    global player, points
     playing: bool = True
     while playing:
         print(f"{player}, you are now in Europe.\nYou see a castle, but the gate is locked, how can you get in?\n1. Knock on the gate\n2. Look around for secret entrance")
@@ -84,8 +81,7 @@ def explore_europe() -> None:
 
 def explore_africa() -> None:
     """Exploring Africa."""
-    global player
-    global points
+    global player, points
     playing: bool = True
     while playing:
         print(f"{player}, you have traveled to Africa.\nYou see a lion approaching a deer, and you have a gun in your hand, what should you do?\n1. Shoot in the air to scare them\n2. Shoot the lion\n3. Watch quietly")
