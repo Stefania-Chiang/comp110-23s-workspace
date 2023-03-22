@@ -28,6 +28,7 @@ def main() -> None:
         if choice == "4":
             print(f"Goodbye {player}, congratulations for earning {points} points during your journey!")
             playing = False
+        print(f"Great job {player}, you have earn {points} points so far, keep it up!")
 
 
 # Greet Procedure
@@ -75,7 +76,7 @@ def explore_europe() -> None:
             points -= 10
             playing = False
         if choice == "2":
-            print("You peek into the secret entrance and discover the evil forces insdie, so you leave the area quickly.\nYou earn 30 adventure points.")
+            print("You peek into the secret entrance and discover the evil forces inside, so you leave the area quickly.\nYou earn 30 adventure points.")
             points += 30
             playing = False
 
