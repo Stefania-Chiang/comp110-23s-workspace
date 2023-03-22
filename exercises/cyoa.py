@@ -16,7 +16,7 @@ def main() -> None:
         print("Which continent do you want to explore?\n1. Asia\n2. Europe\n3. Africa\n4. End my adventure")
         choice: str = input("Enter your choice (1-4): ")
         if choice != "1" and choice != "2" and choice != "3" and choice != "4":
-            print("Sorry, your choice is unavailable in main. Please enter a number from 1 to 4.")
+            choice = input("Sorry, your choice is unavailable in main. Please enter a number from 1 to 4: ")
         if choice == "1":
             explore_asia()
         if choice == "2":
