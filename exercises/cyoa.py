@@ -24,7 +24,7 @@ def main() -> None:
         if choice == "4":
             print(f"Goodbye {player}, congratulations for earning {points} points during your journey!")
             playing = False
-        else:
+        if choice != "1" or "2" or "3" or "4":
             print("Sorry, your choice is unavailable. Please enter a number from 1 to 4.")
             playing = False
 
@@ -50,10 +50,10 @@ def explore_asia() -> None:
             points += 40
             playing = False
         if choice == "2":
-            print("You decide not to take the risk, and you leave the area s.afely.\nYou earn 20 adventure points.")
+            print("You decide not to take the risk, and you leave the area safely.\nYou earn 20 adventure points.")
             points += 20
             playing = False
-        else:
+        if choice != "1" or "2":
             print("Sorry, your choice is unavailable. Please enter a number from 1 to 2.")
 
 
@@ -69,7 +69,7 @@ def explore_europe() -> None:
     if choice == "2":
         print("You peek into the secret entrance and discover the evil forces insdie, so you leave the area quickly.\nYou earn 30 adventure points.")
         points += 30
-    else:
+    if choice != "1" or "2":
         print("Sorry, your choice is unavailable. Please enter a number from 1 to 2.")
 
 
