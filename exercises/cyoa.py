@@ -23,8 +23,10 @@ def main() -> None:
             explore_africa()
         if choice == "4":
             print(f"Goodbye {player}, congratulations for earning {points} points during your journey!")
+            playing = False
         else:
             print("Sorry, your choice is unavailable. Please enter a number from 1 to 4.")
+            playing = False
 
 
 def greet() -> None:
