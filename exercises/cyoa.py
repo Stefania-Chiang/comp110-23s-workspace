@@ -60,35 +60,39 @@ def explore_europe() -> None:
     """Exploring Europe."""
     global player
     global points
-    print(f"{player}, you are now in Europe.\nYou see a castle, but the gate is locked, how can you get in?\n1. Knock on the gate\n2. Look around for secret entrance")
-    choice: str = input("Enter your choice (1-2): ")
-    if choice == "1":
-        print("You mistakenly enter the evil forces territory.\nYou lose 10 adventure points.")
-        points -= 10
-    if choice == "2":
-        print("You peek into the secret entrance and discover the evil forces insdie, so you leave the area quickly.\nYou earn 30 adventure points.")
-        points += 30
-    else:
-        print("Sorry, your choice is unavailable. Please enter a number from 1 to 2.")
+    playing: bool = True
+    while playing:
+        print(f"{player}, you are now in Europe.\nYou see a castle, but the gate is locked, how can you get in?\n1. Knock on the gate\n2. Look around for secret entrance")
+        choice: str = input("Enter your choice (1-2): ")
+        if choice == "1":
+            print("You mistakenly enter the evil forces territory.\nYou lose 10 adventure points.")
+            points -= 10
+        if choice == "2":
+            print("You peek into the secret entrance and discover the evil forces insdie, so you leave the area quickly.\nYou earn 30 adventure points.")
+            points += 30
+        else:
+            print("Sorry, your choice is unavailable. Please enter a number from 1 to 2.")
 
 
 def explore_africa() -> None:
     """Exploring Africa."""
     global player
     global points
-    print(f"{player}, you have traveled to Africa.\nYou see a lion approaching a deer, and you have a gun in your hand, what should you do?\n1. Shoot in the air to scare them\n2. Shoot the lion\n3. Watch quietly")
-    choice: str = input("Enter your choice (1-3): ")
-    if choice == "1":
-        print("You shouldn't interrupt the process of nature.\nYou lose 20 adventure points.")
-        points -= 20
-    if choice == "2":
-        print("You miss your shot, so now the lion is coming for you.\nYou lose 30 adventure points.")
-        points -= 30
-    if choice == "3":
-        print("You play smart and witness a cool process of nature.\nYou earn 10 adventure points.")
-        points += 10
-    else:
-        print("Sorry, your choice is unavailable. Please enter a number from 1 to 3.")
+    playing: bool = True
+    while playing:
+        print(f"{player}, you have traveled to Africa.\nYou see a lion approaching a deer, and you have a gun in your hand, what should you do?\n1. Shoot in the air to scare them\n2. Shoot the lion\n3. Watch quietly")
+        choice: str = input("Enter your choice (1-3): ")
+        if choice == "1":
+            print("You shouldn't interrupt the process of nature.\nYou lose 20 adventure points.")
+            points -= 20
+        if choice == "2":
+            print("You miss your shot, so now the lion is coming for you.\nYou lose 30 adventure points.")
+            points -= 30
+        if choice == "3":
+            print("You play smart and witness a cool process of nature.\nYou earn 10 adventure points.")
+            points += 10
+        else:
+            print("Sorry, your choice is unavailable. Please enter a number from 1 to 3.")
 
 
 if __name__ == "__main__":
