@@ -31,7 +31,7 @@ def main() -> None:
 def greet() -> None:
     """Greet procedure and welcome message."""
     global player
-    print("Welcome to the Around the World travel game!")
+    print("Welcome to the travel around the world game!")
     player = input("What is the passenger's name? ")
     print(f"Hello {player}, let's begin your journey!")
 
