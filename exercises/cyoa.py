@@ -26,7 +26,7 @@ def main() -> None:
         if choice == "3":
             explore_africa()
         if choice == "4":
-            print(f"Goodbye {player}, congratulations for earning {points} points during your journey!")
+            print(f"Good bye {player}, congratulations for earning {points} points during your journey!")
             playing = False
         print(f"Great job {player}, you have earn {points} points so far, keep it up!")
 
