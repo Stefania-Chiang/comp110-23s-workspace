@@ -2,13 +2,10 @@
 __author__ = "730517776"
 
 
-# Randomness
-from random import randint
-print(randint(3, 9))
-
 # Global Variables
 player: str
 points: int
+
 
 # Emojis
 EARTH: str = "\U0001F30D"
@@ -16,7 +13,6 @@ MAP: str = "\U0001F5FA"
 ASIA: str = "\U000026E9"
 EUROPE: str = "\U0001F3F0"
 AFRICA: str = "\U0001F6D6"
-RANDOM: str = "\U00002753"
 SAD: str = "\U0001F63F"
 MONEY: str = "\U0001F4B0"
 
@@ -27,12 +23,12 @@ def main() -> None:
     global player, points
     points = 0
     greet()
+    choice: str = input("Enter your choice (1-4): ")
     # Game Loop
     playing: bool = True
     while playing:
-        print(f"Which continent do you want to explore? {MAP}\n1. Asia {ASIA}\n2. Europe {EUROPE}\n3. Africa {AFRICA}\n4. Choose a random place for me {RANDOM}\n5. End my adventure {EARTH}")
-        choice: str = input("Enter your choice (1-5): ")
-        if choice == "5":
+        print(f"Which continent do you want to explore? {MAP}\n1. Asia {ASIA}\n2. Europe {EUROPE}\n3. Africa {AFRICA}\n4. End my adventure {EARTH}")
+        if choice == "4":
             print(f"Good bye {player}, congratulations for earning {points} points during your journey! {MAP}")
             playing = False
         else:
@@ -44,8 +40,6 @@ def main() -> None:
                 explore_europe()
             if choice == "3":
                 explore_africa()
-            if choice == "4":
-                explore_random()
             print(f"Great job {player}, you have earn {points} points so far, keep it up! {EARTH}")
             playing = True
         
@@ -133,4 +127,4 @@ def explore_africa() -> None:
 
 # Main Procedure
 if __name__ == "__main__":
-    main()
+    main

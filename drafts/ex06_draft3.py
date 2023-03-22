@@ -2,6 +2,10 @@
 __author__ = "730517776"
 
 
+# Randomness
+from random import randint
+
+
 player: str = ""
 points: int = 0
 
@@ -94,6 +98,23 @@ def explore_africa() -> None:
             print("You play smart and witness a cool process of nature.\nYou earn 10 adventure points.")
             points += 10
             playing = False
+
+
+# Random Procedure
+def explore_random() -> None:
+    """Exploring a Random Destination."""
+    global player
+    random_choice: int = randint(1, 3)
+    playing: bool = True
+    while playing:
+        if random_choice == 1:
+            explore_asia()
+        if random_choice == 2:
+            explore_europe()
+        if random_choice == 3:
+            explore_africa()
+        print(f"Let's go {player}, thank you for letting us choose your destination.")
+        playing = False
 
 
 if __name__ == "__main__":
