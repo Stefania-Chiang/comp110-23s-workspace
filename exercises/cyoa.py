@@ -2,10 +2,12 @@
 __author__ = "730517776"
 
 
+# Global Variables
 player: str = ""
 points: int = 0
 
 
+# Main Function
 def main() -> None:
     """Main function."""
     global player
@@ -28,6 +30,7 @@ def main() -> None:
             playing = False
 
 
+# Greet Procedure
 def greet() -> None:
     """Greet procedure and welcome message."""
     global player
@@ -36,6 +39,7 @@ def greet() -> None:
     print(f"Hello {player}, let's begin your journey!")
 
 
+# Custom Procedure
 def explore_asia() -> None:
     """Exploring Asia."""
     global player
