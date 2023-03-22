@@ -14,14 +14,14 @@ def main() -> None:
     playing: bool = True
     while playing:
         print("Which continent do you want to explore?\n1. Asia\n2. Europe\n3. Africa\n4. End my adventure")
-        choice: str = input("Enter your choice (1-4): ")
-        if choice == "1":
+        choice: int = input("Enter your choice (1-4): ")
+        if choice == 1:
             explore_asia()
-        if choice == "2":
+        if choice == 2:
             explore_europe()
-        if choice == "3":
+        if choice == 3:
             explore_africa()
-        if choice == "4":
+        if choice == 4:
             print(f"Goodbye {player}, congratulations for earning {points} points during your journey!")
             playing = False
         else:
