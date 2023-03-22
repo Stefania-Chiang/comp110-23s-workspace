@@ -72,6 +72,7 @@ def explore_asia() -> None:
             playing = False
     
 
+# Custom Procedure
 def explore_europe() -> None:
     """Exploring Europe."""
     global player, points
@@ -98,6 +99,7 @@ def explore_europe() -> None:
             playing = False
 
 
+# Custom Procedure
 def explore_africa() -> None:
     """Exploring Africa."""
     global player, points

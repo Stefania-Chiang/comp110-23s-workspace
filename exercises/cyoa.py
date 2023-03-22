@@ -127,4 +127,4 @@ def explore_africa() -> None:
 
 # Main Procedure
 if __name__ == "__main__":
-    main
+    main()
