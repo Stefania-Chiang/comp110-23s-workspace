@@ -23,16 +23,16 @@ def main() -> None:
     global player, points
     points = 0
     greet()
-    choice: str = input("Enter your choice (1-4): ")
     # Game Loop
     playing: bool = True
     while playing:
         print(f"Which continent do you want to explore? {MAP}\n1. Asia {ASIA}\n2. Europe {EUROPE}\n3. Africa {AFRICA}\n4. End my adventure {EARTH}")
+        choice: str = input("Enter your choice (1-4): ")
         if choice == "4":
             print(f"Good bye {player}, congratulations for earning {points} points during your journey! {MAP}")
             playing = False
         else:
-            if choice != "1" and choice != "2" and choice != "3" and choice != "4" and choice != "5":
+            if choice != "1" and choice != "2" and choice != "3" and choice != "4":
                 choice = input(f"Sorry {player}, your choice is unavailable in the game. {SAD}\nPlease enter a number from 1 to 4: ")
             if choice == "1":
                 explore_asia()
