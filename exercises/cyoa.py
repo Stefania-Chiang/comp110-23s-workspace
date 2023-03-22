@@ -25,7 +25,7 @@ def main() -> None:
             print(f"Goodbye {player}, congratulations for earning {points} points during your journey!")
             playing = False
         else:
-            print("Sorry, your choice is unavailable. Please enter a number from 1 to 4.")
+            print("Sorry, your choice is unavailable in main. Please enter a number from 1 to 4.")
 
 
 def greet() -> None:
@@ -53,7 +53,7 @@ def explore_asia() -> None:
             points += 20
             playing = False
         else:
-            print("Sorry, your choice is unavailable. Please enter a number from 1 to 2.")
+            print("Sorry, your choice is unavailable in asia. Please enter a number from 1 to 2.")
 
 
 def explore_europe() -> None:
@@ -71,7 +71,7 @@ def explore_europe() -> None:
             print("You peek into the secret entrance and discover the evil forces insdie, so you leave the area quickly.\nYou earn 30 adventure points.")
             points += 30
         else:
-            print("Sorry, your choice is unavailable. Please enter a number from 1 to 2.")
+            print("Sorry, your choice is unavailable in europe. Please enter a number from 1 to 2.")
 
 
 def explore_africa() -> None:
@@ -92,7 +92,7 @@ def explore_africa() -> None:
             print("You play smart and witness a cool process of nature.\nYou earn 10 adventure points.")
             points += 10
         else:
-            print("Sorry, your choice is unavailable. Please enter a number from 1 to 3.")
+            print("Sorry, your choice is unavailable in africa. Please enter a number from 1 to 3.")
 
 
 if __name__ == "__main__":
