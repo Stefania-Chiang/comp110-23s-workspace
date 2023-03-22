@@ -14,7 +14,7 @@ def main() -> None:
     playing: bool = True
     while playing:
         print("Which continent do you want to explore?\n1. Asia\n2. Europe\n3. Africa\n4. End my adventure")
-        choice: int = input("Enter your choice (1-4): ")
+        choice: int = int(input("Enter your choice (1-4): "))
         if choice == 1:
             explore_asia()
         if choice == 2:
