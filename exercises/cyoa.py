@@ -1,16 +1,22 @@
 """EX06 - Choose Your Own Adventure."""
 __author__ = "730517776"
+
+
+# Randomness
 from random import randint
 print(randint(3, 9))
 
 # Global Variables
 player: str
 points: int
+
+# Emojis
 EARTH: str = "\U0001F30D"
 MAP: str = "\U0001F5FA"
 ASIA: str = "\U000026E9"
 EUROPE: str = "\U0001F3F0"
 AFRICA: str = "\U0001F6D6"
+RANDOM: str = "\U00002753"
 SAD: str = "\U0001F63F"
 MONEY: str = "\U0001F4B0"
 
@@ -24,13 +30,13 @@ def main() -> None:
     # Game Loop
     playing: bool = True
     while playing:
-        print(f"Which continent do you want to explore? {MAP}\n1. Asia {ASIA}\n2. Europe {EUROPE}\n3. Africa {AFRICA}\n4. End my adventure{EARTH}")
-        choice: str = input("Enter your choice (1-4): ")
-        if choice == "4":
+        print(f"Which continent do you want to explore? {MAP}\n1. Asia {ASIA}\n2. Europe {EUROPE}\n3. Africa {AFRICA}\n4. Choose a random place for me {RANDOM}\n5. End my adventure {EARTH}")
+        choice: str = input("Enter your choice (1-5): ")
+        if choice == "5":
             print(f"Good bye {player}, congratulations for earning {points} points during your journey! {MAP}")
             playing = False
         else:
-            if choice != "1" and choice != "2" and choice != "3" and choice != "4":
+            if choice != "1" and choice != "2" and choice != "3" and choice != "4" and choice != "5":
                 choice = input(f"Sorry {player}, your choice is unavailable in the game. {SAD}\nPlease enter a number from 1 to 4: ")
             if choice == "1":
                 explore_asia()
@@ -38,6 +44,8 @@ def main() -> None:
                 explore_europe()
             if choice == "3":
                 explore_africa()
+            if choice == "4":
+                explore_random()
             print(f"Great job {player}, you have earn {points} points so far, keep it up! {EARTH}")
             playing = True
         
@@ -72,6 +80,7 @@ def explore_asia() -> None:
             playing = False
     
 
+# Custom Procedure
 def explore_europe() -> None:
     """Exploring Europe."""
     global player, points
@@ -98,6 +107,7 @@ def explore_europe() -> None:
             playing = False
 
 
+# Custom Procedure
 def explore_africa() -> None:
     """Exploring Africa."""
     global player, points
