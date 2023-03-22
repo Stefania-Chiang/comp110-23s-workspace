@@ -54,7 +54,7 @@ def explore_asia() -> None:
             print("You decide not to take the risk, and you leave the area safely.\nYou earn 20 adventure points.")
             points += 20
             playing = False
-            
+    
 
 def explore_europe() -> None:
     """Exploring Europe."""
