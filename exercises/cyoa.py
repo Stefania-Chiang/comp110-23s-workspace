@@ -66,15 +66,14 @@ def explore_asia() -> None:
         choice: str = input("Enter your choice (1-2): ")
         if choice != "1" and choice != "2":
             choice = input(f"Sorry {player}, your choice is unavailable in Asia. {SAD}\nPlease enter a number from 1 to 2: ")
-            playing = True
-        else:
-            if choice == "1":
-                print(f"You discover a cute panda!\nYou earn 40 adventure points. {MONEY}")
-                points += 40
-            if choice == "2":
-                print(f"You decide not to take the risk, and you leave the area safely.\nYou earn 20 adventure points. {MONEY}")
-                points += 20
-            playing = False
+        playing = True
+        if choice == "1":
+            print(f"You discover a cute panda!\nYou earn 40 adventure points. {MONEY}")
+            points += 40
+        if choice == "2":
+            print(f"You decide not to take the risk, and you leave the area safely.\nYou earn 20 adventure points. {MONEY}")
+            points += 20
+        playing = False
     
 
 # Custom Procedure 2
@@ -87,21 +86,20 @@ def explore_europe() -> None:
         choice: str = input("Enter your choice (1-4): ")
         if choice != "1" and choice != "2" and choice != "3" and choice != "4":
             choice = input(f"Sorry {player}, your choice is unavailable in Europe. {SAD}\nPlease enter a number from 1 to 2: ")
-            playing = True
-        else:
-            if choice == "1":
-                print(f"You mistakenly enter the evil forces territory.\nYou lose 10 adventure points. {MONEY}")
-                points -= 10
-            if choice == "2":
-                print(f"You peek into the secret entrance and discover the evil forces inside, so you leave the area quickly.\nYou earn 30 adventure points. {MONEY}")
-                points += 30
-            if choice == "3":
-                print(f"You accidently fall down and hurt your ankle.\nYou lose 15 adventure points. {MONEY}")
-                points -= 15
-            if choice == "4":
-                print(f"You wake the vicious watch dogs up, and now they are chasing you.\nYou lose 25 adventure points. {MONEY}")
-                points -= 25
-            playing = False
+        playing = True
+        if choice == "1":
+            print(f"You mistakenly enter the evil forces territory.\nYou lose 10 adventure points. {MONEY}")
+            points -= 10
+        if choice == "2":
+            print(f"You peek into the secret entrance and discover the evil forces inside, so you leave the area quickly.\nYou earn 30 adventure points. {MONEY}")
+            points += 30
+        if choice == "3":
+            print(f"You accidently fall down and hurt your ankle.\nYou lose 15 adventure points. {MONEY}")
+            points -= 15
+        if choice == "4":
+            print(f"You wake the vicious watch dogs up, and now they are chasing you.\nYou lose 25 adventure points. {MONEY}")
+            points -= 25
+        playing = False
 
 
 # Custom Procedure 3
@@ -115,17 +113,16 @@ def explore_africa() -> None:
         if choice != "1" and choice != "2" and choice != "3":
             choice = input(f"Sorry {player}, your choice is unavailable in Africa. {SAD}\nPlease enter a number from 1 to 2: ")
             playing = True
-        else:
-            if choice == "1":
-                print(f"You shouldn't interrupt the process of nature.\nYou lose 20 adventure points. {MONEY}")
-                points -= 20
-            if choice == "2":
-                print(f"You miss your shot, so now the lion is coming for you.\nYou lose 30 adventure points. {MONEY}")
-                points -= 30
-            if choice == "3":
-                print(f"You play smart and witness a cool process of nature.\nYou earn 10 adventure points. {MONEY}")
-                points += 10
-            playing = False
+        if choice == "1":
+            print(f"You shouldn't interrupt the process of nature.\nYou lose 20 adventure points. {MONEY}")
+            points -= 20
+        if choice == "2":
+            print(f"You miss your shot, so now the lion is coming for you.\nYou lose 30 adventure points. {MONEY}")
+            points -= 30
+        if choice == "3":
+            print(f"You play smart and witness a cool process of nature.\nYou earn 10 adventure points. {MONEY}")
+            points += 10
+        playing = False
 
 
 #Randomness
