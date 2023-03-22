@@ -46,7 +46,6 @@ def explore_asia() -> None:
         choice: str = input("Enter your choice (1-2): ")
         if choice != "1" and "2":
             print("Sorry, your choice is unavailable in asia. Please enter a number from 1 to 2.")
-            playing = False
         if choice == "1":
             print("You discover a cute panda!\nYou earn 40 adventure points.")
             points += 40
@@ -67,7 +66,6 @@ def explore_europe() -> None:
         choice: str = input("Enter your choice (1-2): ")
         if choice != "1" and "2":
             print("Sorry, your choice is unavailable in europe. Please enter a number from 1 to 2.")
-            playing = False
         if choice == "1":
             print("You mistakenly enter the evil forces territory.\nYou lose 10 adventure points.")
             points -= 10
@@ -88,7 +86,6 @@ def explore_africa() -> None:
         choice: str = input("Enter your choice (1-3): ")
         if choice != "1" and "2" and "3":
             print("Sorry, your choice is unavailable in africa. Please enter a number from 1 to 2.")
-            playing = False
         if choice == "1":
             print("You shouldn't interrupt the process of nature.\nYou lose 20 adventure points.")
             points -= 20
