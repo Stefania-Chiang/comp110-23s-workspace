@@ -3,12 +3,8 @@ __author__ = "730517776"
 from random import randint
 
 
-# Global Variables
 player: str
 points: int
-
-
-# Emojis
 EARTH: str = "\U0001F30D"
 MAP: str = "\U0001F5FA"
 MONEY: str = "\U0001F4B0"
@@ -21,7 +17,6 @@ SAD: str = "\U0001F63F"
 HAPPY: str = "\U0001F973"
 
 
-# Main Function
 def main() -> None:
     """Main game loop."""
     global player, points
@@ -50,7 +45,6 @@ def main() -> None:
             print(f"Great job {player}, you have earn {points} points so far, keep it up! {HAPPY}")
         
 
-# Greet Procedure
 def greet() -> None:
     """Greet procedure and welcome message."""
     global player
@@ -59,7 +53,6 @@ def greet() -> None:
     print(f"Hello {player}, let's begin your journey! {EARTH}")
 
 
-# Custom Procedure 1
 def explore_asia() -> None:
     """Exploring Asia."""
     global player, points
@@ -78,7 +71,6 @@ def explore_asia() -> None:
         playing = False
     
 
-# Custom Procedure 2
 def explore_europe() -> None:
     """Exploring Europe."""
     global player, points
@@ -103,7 +95,6 @@ def explore_europe() -> None:
         playing = False
 
 
-# Custom Procedure 3
 def explore_africa() -> None:
     """Exploring Africa."""
     global player, points
@@ -125,7 +116,6 @@ def explore_africa() -> None:
         playing = False
 
 
-# Custom Function
 def explore_america(bonus_points) -> int:
     """Exploring America with bonus points."""
     global player
@@ -143,16 +133,14 @@ def explore_america(bonus_points) -> int:
             print(f"Well done {player}! {HAPPY}\nYou got it right, and you earn a bonus adventure points of 100. {MONEY}")
             bonus_points += 100
         playing = False
-    return bonus_points
+        return bonus_points
 
 
-# Randomness
 def random() -> None:
     """Randomly pick a lucky color."""
     global player
     print(f"Hang on {player}, before you leave the game, we'll let you know your lucky number for today! {EARTH}\nYour lucky number is {randint(1,9)}, yay! {HAPPY}")
 
 
-# Main Procedure
 if __name__ == "__main__":
     main()
