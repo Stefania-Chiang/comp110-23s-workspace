@@ -3,8 +3,8 @@ __author__: str = "730517776"
 from random import randint
 
 
-player: str = ""
-points: int = 0
+player: str
+points: int
 EARTH: str = "\U0001F30D"
 MAP: str = "\U0001F5FA"
 MONEY: str = "\U0001F4B0"
@@ -20,6 +20,7 @@ HAPPY: str = "\U0001F973"
 def main() -> None:
     """Main game loop."""
     global player, points
+    points = 0
     greet()
     playing: bool = True
     while playing:
@@ -114,10 +115,10 @@ def explore_africa() -> None:
         playing = False
 
 
-def explore_america(bonus_points) -> int:
+def explore_america(bonus_points: int) -> int:
     """Exploring America with bonus points."""
     global player
-    bonus_points: int = 0
+    bonus_points = 0
     playing: bool = True
     while playing:
         print(f"{player}, you have arrived in America. {AMERICA}\nThis is your chance to earn some bonus adventure points, what country's flag is this? {BRAZIL}\n1. Argentina\n2. Brazil\n3. Portugal\n4. Puerto Rico\n5. Canada\n6. Mexico")
