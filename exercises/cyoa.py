@@ -24,7 +24,6 @@ def main() -> None:
     global player, points
     points = 0
     greet()
-    # Game Loop
     playing: bool = True
     while playing:
         print(f"Which continent do you want to explore? {MAP}\n1. Asia {ASIA}\n2. Europe {EUROPE}\n3. Africa {AFRICA}\n4. America {AMERICA}\n5. End my adventure {EARTH}")
