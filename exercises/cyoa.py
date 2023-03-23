@@ -127,7 +127,7 @@ def explore_africa() -> None:
 
 # Custom Function
 def explore_america(bonus_points) -> int:
-    """exploring america"""
+    """Exploring America with bonus points."""
     global player
     bonus_points: int = 0
     playing: bool = True
@@ -146,7 +146,7 @@ def explore_america(bonus_points) -> int:
     return bonus_points
 
 
-#Randomness
+# Randomness
 def random() -> None:
     """Randomly pick a lucky color."""
     global player
