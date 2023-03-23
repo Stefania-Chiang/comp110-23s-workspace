@@ -16,7 +16,7 @@ ASIA: str = "\U000026E9"
 EUROPE: str = "\U0001F3F0"
 AFRICA: str = "\U0001F6D6"
 AMERICA: str = "\U0001F5FD"
-BRAZIL: str = "\U0001F1F7"
+BRAZIL: str = "\U0001F1E7"
 SAD: str = "\U0001F63F"
 HAPPY: str = "\U0001F973"
 
@@ -47,8 +47,8 @@ def main() -> None:
                 explore_africa()
             if choice == "4":
                 explore_america()
+                points += bonus_points
             print(f"Great job {player}, you have earn {points} points so far, keep it up! {HAPPY}")
-            playing = True
         
 
 # Greet Procedure
@@ -70,7 +70,6 @@ def explore_asia() -> None:
         choice: str = input("Enter your choice (1-2): ")
         if choice != "1" and choice != "2":
             choice = input(f"Sorry {player}, your choice is unavailable in Asia. {SAD}\nPlease enter a number from 1 to 2: ")
-        playing = True
         if choice == "1":
             print(f"You discover a cute panda!\nYou earn 40 adventure points. {MONEY}")
             points += 40
@@ -90,7 +89,6 @@ def explore_europe() -> None:
         choice: str = input("Enter your choice (1-4): ")
         if choice != "1" and choice != "2" and choice != "3" and choice != "4":
             choice = input(f"Sorry {player}, your choice is unavailable in Europe. {SAD}\nPlease enter a number from 1 to 4: ")
-        playing = True
         if choice == "1":
             print(f"You mistakenly enter the evil forces territory.\nYou lose 10 adventure points. {MONEY}")
             points -= 10
@@ -116,7 +114,6 @@ def explore_africa() -> None:
         choice: str = input("Enter your choice (1-3): ")
         if choice != "1" and choice != "2" and choice != "3":
             choice = input(f"Sorry {player}, your choice is unavailable in Africa. {SAD}\nPlease enter a number from 1 to 3: ")
-            playing = True
         if choice == "1":
             print(f"You shouldn't interrupt the process of nature.\nYou lose 20 adventure points. {MONEY}")
             points -= 20
@@ -133,14 +130,12 @@ def explore_africa() -> None:
 def explore_america() -> int:
     """exploring america"""
     global player
-    bonus_points: int = 0
     playing: bool = True
     while playing:
         print(f"{player}, you have arrived in America. {AMERICA}\nThis is your chance to earn some bonus adventure points, what country's flag is this? {BRAZIL}\n1. Argentina\n2. Brazil\n3. Portugal\n4. Puerto Rico\n5. Canada\n6. Mexico")
         choice: str = input("Enter your choice (1-6): ")
         if choice != "1" and choice != "2" and choice != "3" and choice != "4" and choice != "5" and choice != "6":
             choice = input(f"Sorry {player}, your choice is unavailable in America. {SAD}\nPlease enter a number from 1 to 6: ")
-        playing = True
         if choice == "2":
             print(f"Well done {player}! {HAPPY}\nYou got it right, and you earn a bonus adventure points of 100. {MONEY}")
             bonus_points += 100
