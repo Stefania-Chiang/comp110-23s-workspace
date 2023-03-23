@@ -47,7 +47,7 @@ def main() -> None:
                 explore_africa()
             if choice == "4":
                 explore_america()
-                points += bonus_points
+                points = explore_america(points)
             print(f"Great job {player}, you have earn {points} points so far, keep it up! {HAPPY}")
         
 
@@ -127,7 +127,7 @@ def explore_africa() -> None:
 
 
 # Custom Function
-def explore_america() -> int:
+def explore_america(bonus_points) -> int:
     """exploring america"""
     global player
     playing: bool = True
