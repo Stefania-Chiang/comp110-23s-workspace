@@ -125,7 +125,7 @@ def explore_america(bonus_points: int) -> int:
         choice: int = int(input("Enter your choice (1-6): "))
         if choice != 1 and choice != 2 and choice != 3 and choice != 4 and choice != 5 and choice != 6:
             choice = int(input(f"Sorry {player}, your choice is unavailable in America. {SAD}\nPlease enter a number from 1 to 6: "))
-        if choice == 1 or choice == 2 or choice == 4 or choice == 5 or choice == 6:
+        if choice == 1 or choice == 3 or choice == 4 or choice == 5 or choice == 6:
             print(f"Nice try {player}. {SAD}\nAlthough you got the wrong answer, we'll still give you a bonus adventure points of 5. {MONEY}")
             bonus_points += 5
         if choice == 2:
