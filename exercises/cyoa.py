@@ -1,5 +1,7 @@
 """EX06 - Choose Your Own Adventure."""
 __author__: str = "730517776"
+
+
 from random import randint
 
 
