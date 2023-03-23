@@ -1,5 +1,7 @@
 """EX06 - Choose Your Own Adventure."""
 __author__ = "730517776"
+
+
 from random import randint
 
 
@@ -133,7 +135,7 @@ def explore_america(bonus_points) -> int:
             print(f"Well done {player}! {HAPPY}\nYou got it right, and you earn a bonus adventure points of 100. {MONEY}")
             bonus_points += 100
         playing = False
-        return bonus_points
+    return bonus_points
 
 
 def random() -> None:
