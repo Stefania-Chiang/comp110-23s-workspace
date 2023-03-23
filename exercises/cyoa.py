@@ -46,8 +46,7 @@ def main() -> None:
             if choice == "3":
                 explore_africa()
             if choice == "4":
-                explore_america()
-                points = explore_america(points)
+                points += explore_america(points)
             print(f"Great job {player}, you have earn {points} points so far, keep it up! {HAPPY}")
         
 
@@ -130,18 +129,19 @@ def explore_africa() -> None:
 def explore_america(bonus_points) -> int:
     """exploring america"""
     global player
+    bonus_points: int = 0
     playing: bool = True
     while playing:
         print(f"{player}, you have arrived in America. {AMERICA}\nThis is your chance to earn some bonus adventure points, what country's flag is this? {BRAZIL}\n1. Argentina\n2. Brazil\n3. Portugal\n4. Puerto Rico\n5. Canada\n6. Mexico")
         choice: str = input("Enter your choice (1-6): ")
         if choice != "1" and choice != "2" and choice != "3" and choice != "4" and choice != "5" and choice != "6":
             choice = input(f"Sorry {player}, your choice is unavailable in America. {SAD}\nPlease enter a number from 1 to 6: ")
-        if choice == "2":
-            print(f"Well done {player}! {HAPPY}\nYou got it right, and you earn a bonus adventure points of 100. {MONEY}")
-            bonus_points += 100
         if choice == "1" or choice == "3" or choice == "4" or choice == "5" or choice == "6":
             print(f"Nice try {player}. {SAD}\nAlthough you got the wrong answer, we'll still give you a bonus adventure points of 5. {MONEY}")
             bonus_points += 5
+        if choice == "2":
+            print(f"Well done {player}! {HAPPY}\nYou got it right, and you earn a bonus adventure points of 100. {MONEY}")
+            bonus_points += 100
         playing = False
     return bonus_points
 
