@@ -15,6 +15,8 @@ MONEY: str = "\U0001F4B0"
 ASIA: str = "\U000026E9"
 EUROPE: str = "\U0001F3F0"
 AFRICA: str = "\U0001F6D6"
+AMERICA: str = "\U0001F5FD"
+BRAZIL: str = "\U0001F1F7"
 SAD: str = "\U0001F63F"
 HAPPY: str = "\U0001F973"
 
@@ -28,21 +30,23 @@ def main() -> None:
     # Game Loop
     playing: bool = True
     while playing:
-        print(f"Which continent do you want to explore? {MAP}\n1. Asia {ASIA}\n2. Europe {EUROPE}\n3. Africa {AFRICA}\n4. End my adventure {EARTH}")
-        choice: str = input("Enter your choice (1-4): ")
-        if choice == "4":
+        print(f"Which continent do you want to explore? {MAP}\n1. Asia {ASIA}\n2. Europe {EUROPE}\n3. Africa {AFRICA}\n4. America {AMERICA}\n5. End my adventure {EARTH}")
+        choice: str = input("Enter your choice (1-5): ")
+        if choice == "5":
             random()
             print(f"Good bye {player}, congratulations for earning {points} points during your journey! {MAP}")
             playing = False
         else:
-            if choice != "1" and choice != "2" and choice != "3" and choice != "4":
-                choice = input(f"Sorry {player}, your choice is unavailable in the game. {SAD}\nPlease enter a number from 1 to 4: ")
+            if choice != "1" and choice != "2" and choice != "3" and choice != "4" and choice != "5":
+                choice = input(f"Sorry {player}, your choice is unavailable in the game. {SAD}\nPlease enter a number from 1 to 5: ")
             if choice == "1":
                 explore_asia()
             if choice == "2":
                 explore_europe()
             if choice == "3":
                 explore_africa()
+            if choice == "4":
+                explore_america()
             print(f"Great job {player}, you have earn {points} points so far, keep it up! {HAPPY}")
             playing = True
         
@@ -123,6 +127,28 @@ def explore_africa() -> None:
             print(f"You play smart and witness a cool process of nature.\nYou earn 10 adventure points. {MONEY}")
             points += 10
         playing = False
+
+
+# Custom Function
+def explore_america() -> int:
+    """exploring america"""
+    global player
+    bonus_points: int = 0
+    playing: bool = True
+    while playing:
+        print(f"{player}, you have arrived in America. {AMERICA}\nThis is your chance to earn some bonus adventure points, what country's flag is this? {BRAZIL}\n1. Argentina\n2. Brazil\n3. Portugal\n4. Puerto Rico\n5. Canada\n6. Mexico")
+        choice: str = input("Enter your choice (1-6): ")
+        if choice != "1" and choice != "2" and choice != "3" and choice != "4" and choice != "5" and choice != "6":
+            choice = input(f"Sorry {player}, your choice is unavailable in America. {SAD}\nPlease enter a number from 1 to 6: ")
+        playing = True
+        if choice == "2":
+            print(f"Well done {player}! {HAPPY}\nYou got it right, and you earn a bonus adventure points of 100. {MONEY}")
+            bonus_points += 100
+        if choice == "1" or choice == "3" or choice == "4" or choice == "5" or choice == "6":
+            print(f"Nice try {player}. {SAD}\nAlthough you got the wrong answer, we'll still give you a bonus adventure points of 5. {MONEY}")
+            bonus_points += 5
+        playing = False
+    return bonus_points
 
 
 #Randomness
