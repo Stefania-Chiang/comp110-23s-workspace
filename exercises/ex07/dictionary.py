@@ -10,12 +10,3 @@ def invert(old_dict: dict[str, str]) -> dict[str, str]:
     for value in old_dict:
         new_dict[key] = old_dict[value]
     return new_dict
-
-
-def merge(a: dict[str, str], b: dict[str, str]) -> dict[str, str]:
-    result: dict[str, str] = {}
-    for key in a:
-        result[key] = a[key]
-    for key in b:
-        result[key] = b[key]
-    return result
