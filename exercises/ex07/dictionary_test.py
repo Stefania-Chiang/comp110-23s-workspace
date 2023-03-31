@@ -6,14 +6,19 @@ from exercises.ex07.dictionary import favorite_color
 from exercises.ex07.dictionary import count
 
 
-def test_invert_with_positive_numbers() -> None:
-    """Test invert with positive numbers."""
+def test_invert() -> None:
+    """Test invert."""
     test_old_dict: dict[str, str] = {"chocolate": "12", "vanilla": "8", "strawberry": "5"}
     assert invert(test_old_dict) == {"12": "chocolate", "8": "vanilla", "5": "strawberry"}
 
 
-def test_count_with_positive_numbers() -> None:
-    """Test count with positive numbers."""
+def test_count() -> None:
+    """Test count."""
     test_old_list: list[str] = {"chocolate", "vanilla", "strawberry", "vanilla", "chocolate"}
     assert count(test_old_list) == {"chocolate": 2, "vanilla": 2, "strawberry": 1}
-    
+
+def test_favorite_color() -> None:
+    """Test favorite color."""
+    test_old_dict: dict[str, str] = {"Josh": "blue", "Martina": "red", "Sophia": "blue", "Betty": "yello"}
+    assert favorite_color(test_old_dict) == "blue"
+
