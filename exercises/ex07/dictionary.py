@@ -4,17 +4,22 @@ __author__ = "730517776"
 
 def invert(old_dict: dict[str, str]) -> dict[str, str]:
     """Return a new dictionary that inverts the keys and the values of the old dictionary."""
-    list_one: list[str] = []
-    list_two: list[str] = []
-    idx: int = 0
-    while idx < len(old_dict):
-        list_one.append(old_dict[idx])
-        
-        idx += 1
-
-
-
     new_dict: dict[str, str] = {}
+    for key in old_dict:
+        if old_dict[key] in new_dict:
+            raise KeyError("Key Error!")
+        new_dict[old_dict[key]] = key
+    return new_dict
+    
+
+def favorite_color(old_dict: dict[str, str]) -> str:
+    """Return a str which is the color that appears most frequently."""
+
+
+
+def count(list[str]) -> dict[str, int]:
+    """Return"""
+
 
 
 def zip(first_list: list[str], second_list: list[int]) -> dict[str, int]:

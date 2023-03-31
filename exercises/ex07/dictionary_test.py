@@ -2,6 +2,8 @@
 __author__ = "730517776"
 
 from exercises.ex07.dictionary import invert
+from exercises.ex07.dictionary import favorite_color
+from exercises.ex07.dictionary import count
 
 
 def test_invert_with_positive_numbers() -> None:
