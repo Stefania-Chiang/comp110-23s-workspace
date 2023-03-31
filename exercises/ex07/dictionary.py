@@ -4,10 +4,17 @@ __author__ = "730517776"
 
 def invert(old_dict: dict[str, str]) -> dict[str, str]:
     """Return a new dictionary that inverts the keys and the values of the old dictionary."""
-    new_dict: dict[str, str] = {}
+    list_one: list[str] = []
+    list_two: list[str] = []
     idx: int = 0
     while idx < len(old_dict):
-        new_dict[]
+        list_one.append(old_dict[idx])
+        
+        idx += 1
+
+
+
+    new_dict: dict[str, str] = {}
 
 
 def zip(first_list: list[str], second_list: list[int]) -> dict[str, int]:
@@ -20,3 +27,6 @@ def zip(first_list: list[str], second_list: list[int]) -> dict[str, int]:
         return input_list 
     else:
         return input_list
+
+
+# python -m pytest exercises/ex07
