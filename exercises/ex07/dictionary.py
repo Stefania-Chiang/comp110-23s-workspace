@@ -13,13 +13,14 @@ def invert(old_dict: dict[str, str]) -> dict[str, str]:
     
 
 def favorite_color(old_dict: dict[str, str]) -> str:
-    """Return a str which is the color that appears most frequently in the given dictionary."""
-    new_str: str = ""
+    """Return a new string which is the color that appears most frequently in the old dictionary."""
+    new_string: str = ""
+    
 
 
 
 def count(old_list: list[str]) -> dict[str, int]:
-    """Return a dictionary where each key is a unique value in the given list and each value is the count of that appeared in the given list."""
+    """Return a new dictionary where each key is a unique value in the old list and each value is the count of that appeared in the old list."""
     new_dict: dict[str, int] = {}
     idx: int = 0
     list_item: str = old_list[idx]
