@@ -20,6 +20,6 @@ def test_favorite_color() -> None:
 
 def test_count() -> None:
     """Test count."""
-    test_old_list: list[str] = {"chocolate", "vanilla", "strawberry", "vanilla", "chocolate"}
+    test_old_list: list[str] = ["chocolate", "vanilla", "strawberry", "vanilla", "chocolate"]
     assert count(test_old_list) == {"chocolate": 2, "vanilla": 2, "strawberry": 1}
 
