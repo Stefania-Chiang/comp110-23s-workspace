@@ -21,11 +21,14 @@ def favorite_color(old_dict: dict[str, str]) -> str:
         else:
             new_dict[dict_item] = 1 
     max_dict_item: int = new_dict[0]
+    max_dict_index: int = 0
     idx: int = 0
     while idx < len(new_dict):
         if max_dict_item < new_dict[idx + 1]:
             max_dict_item = new_dict[idx + 1]
-        index += 1
+            max_dict_index += 1
+        idx += 1
+    return new_dict[max_dict_index]
     # return the matching key for the value of max dict item
     # if there's a tie, return the key that appear first
     
