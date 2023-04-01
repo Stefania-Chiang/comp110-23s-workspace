@@ -42,3 +42,6 @@ def count(old_list: list[str]) -> dict[str, int]:
         else:
             new_dict[list_item] = 1
     return new_dict
+
+
+# python -m tools.submission exercises/ex07
