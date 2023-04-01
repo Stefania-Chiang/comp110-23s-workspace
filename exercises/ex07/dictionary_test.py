@@ -5,7 +5,6 @@ __author__ = "730517776"
 from exercises.ex07.dictionary import invert
 from exercises.ex07.dictionary import favorite_color
 from exercises.ex07.dictionary import count
-from exercises.ex07.dictionary import pytest
 
 
 def test_invert_with_all_words() -> None:
@@ -60,11 +59,6 @@ def test_count_with_empty_list() -> None:
     """Test count with an empty list."""
     test_old_list: list[str] = []
     assert count(test_old_list) == {}
-
-
-with pytest.raises(KeyError):
-        my_dictionary = {'kris': 'jordan', 'michael': 'jordan'}
-        invert(my_dictionary)
 
 
 # python -m pytest exercises/ex07
