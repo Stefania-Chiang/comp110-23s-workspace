@@ -59,6 +59,3 @@ def test_count_with_empty() -> None:
     """Test count with an empty list."""
     test_old_list: list[str] = []
     assert count(test_old_list) == {}
-
-
-# python -m pytest exercises/ex07

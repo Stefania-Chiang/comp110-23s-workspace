@@ -17,20 +17,16 @@ def favorite_color(old_dict: dict[str, str]) -> str:
     new_dict: dict[str, int] = {}
     for dict_item in old_dict:
         if old_dict[dict_item] in new_dict:
-            new_dict[dict_item] += 1
+            new_dict[old_dict[dict_item]] += 1
         else:
-            new_dict[dict_item] = 1 
-    max_dict_item: int = new_dict[0]
-    max_dict_index: int = 0
-    idx: int = 0
-    while idx < len(new_dict):
-        if max_dict_item < new_dict[idx + 1]:
-            max_dict_item = new_dict[idx + 1]
-            max_dict_index += 1
-        idx += 1
-    return new_dict[max_dict_index]
-    # return the matching key for the value of max dict item
-    # if there's a tie, return the key that appear first
+            new_dict[old_dict[dict_item]] = 1
+    max_dict_item: str = ""
+    max_dict_number: int = 0
+    for dict_item in new_dict:
+        if max_dict_number < new_dict[dict_item]:
+            max_dict_number = new_dict[dict_item]
+            max_dict_item = dict_item
+    return max_dict_item
     
     
 def count(old_list: list[str]) -> dict[str, int]:
@@ -42,6 +38,3 @@ def count(old_list: list[str]) -> dict[str, int]:
         else:
             new_dict[list_item] = 1
     return new_dict
-
-
-# python -m tools.submission exercises/ex07
